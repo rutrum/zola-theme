@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://localhost"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
@@ -14,3 +14,15 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+[[extra.navlink]]
+name = "Blog"
+url = "/"
+
+[[extra.navlink]]
+name = "Docs"
+url = "/"
+
+[[extra.navlink]]
+name = "About"
+url = "/"
