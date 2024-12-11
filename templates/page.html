@@ -1,6 +1,10 @@
-{% block content %}
-Hello!
+{% extends "index.html" %}
 
-{{ page.content | safe }}
+{% block content %}
+<div class="text-3xl font-bold">Page</div>
+
+<div class="prose">
+  {{ page.content | safe }}
+</div>
 
 {% endblock %}
