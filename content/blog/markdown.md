@@ -5,7 +5,7 @@ date = 2022-05-15T15:00:00Z
 draft = false
 
 [taxonomies]
-tags = ["Features", "Markdown"]
+tags = ["markdown"]
 
 [extra]
 keywords = "Markdown, Style, Syntax, Syntax Highlighting"

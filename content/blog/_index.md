@@ -2,6 +2,4 @@
 title = "Blog"
 +++
 
-# Header 1
-
-This is my blog.
+Welcome to my blog!  This is where you can find articles that I write about my favorite things.
