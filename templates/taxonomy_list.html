@@ -1,5 +1,13 @@
 {% extends "index.html" %}
 
+{% block debug %}taxonomy_list.html{% endblock %}
+
 {% block content %}
-<div class="text-3xl font-bold">Taxonomy List</div>
+{% for term in terms %}
+    <h2>{{ term.name }}</h2>
+    {% for page in term.pages %}
+    {# TODO: fix this http thing #}
+    <li><a href="http://{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+{% endfor %}
 {% endblock %}

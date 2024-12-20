@@ -1,7 +1,10 @@
 {% extends "index.html" %}
 
+{% block debug %}section.html{% endblock %}
+
 {% block content %}
-<div class="text-3xl font-bold">Section</div>
+
+<div class="text-3xl font-bold">{{ section.title }}</div>
 {{ section.content | safe }}
 
 {% endblock %}

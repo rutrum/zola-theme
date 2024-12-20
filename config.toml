@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://localhost"
+base_url = "http://localhost"
 title = "Theme"
 description = "A theme"
 
@@ -11,6 +11,7 @@ build_search_index = true
 
 taxonomies = [
     { name = "tags" },
+    { name = "series" },
 ]
 
 [markdown]

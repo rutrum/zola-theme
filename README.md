@@ -66,3 +66,14 @@ Shortcodes:
 Other:
 * projects list, like article summaries but without an article [Kita](https://st1020.github.io/kita/projects/)
 * double side bar...interesting but not what I want? [Digital Garden](https://digital-garden-hugo-theme.vercel.app/articles/primary-menu/)
+
+## Todo
+
+- [ ] build more content with 2 taxonomies: tags, series
+- [ ] build basic functionality in basic templates
+  - [ ] section.html
+  - [ ] page.html
+  - [ ] taxonomy_list.html
+  - [ ] taxonomy_single.html
+  - [ ] 404.html
+- [ ] favicon

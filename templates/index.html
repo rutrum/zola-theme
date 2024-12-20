@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div class="absolute top-0 left-0">
+        <p>{% block debug %}index.html{% endblock %}</p>
+    </div>
     <div class="bg-gray-300 flex flex-row -p-2 m-2 rounded-xl">
         <div class="flex justify-between items-center mx-auto w-full max-w-prose h-20">
             <a href="/">{{ config.title }}</a>
@@ -26,11 +29,12 @@
     </div>
   <section class="section">
     <div class="container mx-auto max-w-prose my-10">
+      {# dont do this, not all pages want prose, like taxonomies #}
+      <div class="prose lg:prose-xl prose-h1:font-bold">
       {% block content %} 
-          <div class="prose lg:prose-xl prose-h1:font-bold">
-            {{ section.content | safe }}
-          </div>
+        {{ section.content | safe }}
       {% endblock %}
+      </div>
     </div>
   </section>
 </body>

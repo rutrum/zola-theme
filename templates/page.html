@@ -1,10 +1,7 @@
 {% extends "index.html" %}
 
+{% block debug %}page.html{% endblock %}
+
 {% block content %}
-<div class="text-3xl font-bold">Page</div>
-
-<div class="prose">
-  {{ page.content | safe }}
-</div>
-
+{{ page.content | safe }}
 {% endblock %}
