@@ -3,6 +3,8 @@
 {% block debug %}taxonomy_single.html{% endblock %}
 
 {% block content %}
-<div class="text-3xl font-bold">Taxonomy Single</div>
-{{ taxonomy | safe }}
+<div class="text-3xl font-bold">{{taxonomy.name}}: {{term.name}}</div>
+{% for page in term.pages %}
+<li><a href="http://{{ page.permalink | safe }}">{{ page.title }}</a></li>
+{% endfor %}
 {% endblock %}

@@ -4,7 +4,7 @@
 
 {% block content %}
 {% for term in terms %}
-    <h2>{{ term.name }}</h2>
+<a href="http://{{term.permalink | safe}}"><h2>{{ term.name }}</h2></a>
     {% for page in term.pages %}
     {# TODO: fix this http thing #}
     <li><a href="http://{{ page.permalink | safe }}">{{ page.title }}</a></li>
