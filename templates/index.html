@@ -15,7 +15,6 @@
     <div class="bg-gray-300 flex flex-row -p-2 m-2 rounded-xl">
         <div class="flex justify-between items-center mx-auto w-full max-w-prose h-20">
             <a href="/">{{ config.title }}</a>
-            <a href="/blog/markdown">markdown</a>
               <div>
                 {% for nav in config.extra.navlink %}
                 <a 
@@ -30,7 +29,7 @@
   <section class="section">
     <div class="container mx-auto max-w-prose my-10">
       {# dont do this, not all pages want prose, like taxonomies #}
-      <div class="prose lg:prose-xl prose-h1:font-bold">
+      <div class="prose">
       {% block content %} 
         {{ section.content | safe }}
       {% endblock %}

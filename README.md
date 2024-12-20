@@ -69,11 +69,21 @@ Other:
 
 ## Todo
 
-- [ ] build more content with 2 taxonomies: tags, series
+- [ ] build more content
+  - [ ] markdown pages
+  - [ ] a series
+  - [ ] a subsection (the series?)
 - [ ] build basic functionality in basic templates
-  - [ ] section.html
+  - [x] section.html
   - [ ] page.html
-  - [ ] taxonomy_list.html
-  - [ ] taxonomy_single.html
+  - [x] taxonomy_list.html
+  - [x] taxonomy_single.html
   - [ ] 404.html
 - [ ] favicon
+- [ ] page styles
+  - [ ] headings, paragraph, lists
+  - [ ] tables, large tables
+  - [ ] code blocks, inline code
+  - [ ] other: sup, sub, mark
+  - [ ] latex
+  - [ ] images
