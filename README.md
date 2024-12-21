@@ -70,15 +70,10 @@ Other:
 ## Todo
 
 - [ ] build more content
-  - [ ] markdown pages
+  - [x] markdown pages
   - [ ] a series
   - [ ] a subsection (the series?)
-- [ ] build basic functionality in basic templates
-  - [x] section.html
-  - [ ] page.html
-  - [x] taxonomy_list.html
-  - [x] taxonomy_single.html
-  - [ ] 404.html
+- [x] build basic functionality in basic templates
 - [ ] favicon
 - [ ] page styles
   - [ ] headings, paragraph, lists
@@ -87,3 +82,4 @@ Other:
   - [ ] other: sup, sub, mark
   - [ ] latex
   - [ ] images
+- [ ] get hot-reloading working

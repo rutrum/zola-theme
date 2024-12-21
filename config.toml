@@ -33,3 +33,7 @@ url = "/tags"
 [[extra.navlink]]
 name = "About"
 url = "/about"
+
+[[extra.navlink]]
+name = "404"
+url = "/asdfasdfasdf"

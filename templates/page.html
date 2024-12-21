@@ -3,5 +3,9 @@
 {% block debug %}page.html{% endblock %}
 
 {% block content %}
+<div class="bg-slate-100 p-5 rounded-t-lg">
+    <h1>{{page.title}}</h1>
 {{ page.content | safe }}
+</div>
+<div class="bg-gradient-to-b from-slate-100 w-full h-20"></div>
 {% endblock %}
