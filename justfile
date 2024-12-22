@@ -10,13 +10,15 @@ serve:
     browser-sync start \
         --server public \
         --host localhost \
+        --watch true \
         --port 1111 \
-        --no-ui \
-        --files public \
+        --no-ghost-mode \
         --no-open
 
 watch:
-    watchexec -rc reset "just build-dev"
+    just serve &
+    tailwindcss -i styles/styles.css -o static/styles/styles.css --watch=always &
+    watchexec --restart --clear=reset "zola build; browser-sync reload --port 1111"
 
 tree:
     tree -I "public|static" --dirsfirst
