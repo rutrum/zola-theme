@@ -7,10 +7,16 @@ build-dev:
     zola build -u localhost:1111
 
 serve:
-    microserver -p 1111 public
+    browser-sync start \
+        --server public \
+        --host localhost \
+        --port 1111 \
+        --no-ui \
+        --files public \
+        --no-open
 
 watch:
-    watchexec -rc reset "just build-dev; just serve"
+    watchexec -rc reset "just build-dev"
 
 tree:
     tree -I "public|static" --dirsfirst

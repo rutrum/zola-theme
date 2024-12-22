@@ -28,8 +28,8 @@
       devShells.${system}.default = pkgs.mkShell {
         name = name;
         buildInputs = deps ++ (with pkgs; [
-          microserver
           watchexec
+          nodePackages.browser-sync
         ]);
     };
   };
