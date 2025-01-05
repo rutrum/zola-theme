@@ -13,6 +13,7 @@ serve:
         --watch true \
         --port 1111 \
         --no-ghost-mode \
+        --reload-delay 200 \
         --no-open
 
 watch:

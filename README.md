@@ -82,4 +82,10 @@ Other:
   - [ ] other: sup, sub, mark
   - [ ] latex
   - [ ] images
-- [ ] get hot-reloading working
+- [x] get hot-reloading working
+
+## Notes
+
+### 2025-01-04
+
+After getting hot reloading working I want to test it out by getting some styling feature done.  I'm going to do some testing with the nav bar, and take inspiration from duck quill as noted above.

@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://localhost"
+base_url = "http://localhost:1111"
 title = "Theme Title"
 description = "A theme"
 

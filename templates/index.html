@@ -12,13 +12,14 @@
     <div class="absolute top-0 left-0">
         <p>{% block debug %}index.html{% endblock %}</p>
     </div>
-    <div class="bg-gray-300 flex flex-row -p-2 m-2 rounded-xl">
-        <div class="flex justify-between items-center mx-auto w-full max-w-prose h-20">
-            <a href="/">{{ config.title }}</a>
+    <!-- navbar -->
+    <div class="bg-slate-800 flex-row m-2 rounded-xl max-w-3xl mx-auto">
+        <div class="flex justify-between items-center w-full mx-auto max-w-prose h-16 text-slate-100">
+            <a class="text-xl font-black tracking-wide" href="/">{{ config.title }}</a>
               <div>
                 {% for nav in config.extra.navlink %}
                 <a 
-                 href="{{ nav.url }}"
+                  href="{{ nav.url }}"
                   class="font-bold px-4 py-2 h-10 hover:bg-red-400 rounded-xl"
                 >{{ nav.name }}</a>
                 {% endfor %}
