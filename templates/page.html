@@ -3,9 +3,36 @@
 {% block debug %}page.html{% endblock %}
 
 {% block content %}
-<div class="bg-slate-100 p-5 rounded-t-lg">
-    <h1>{{page.title}}</h1>
-{{ page.content | safe }}
+<div class="flex flex-row mx-auto justify-center items-start">
+    <div class="bg-slate-100 p-5 m-5 w-64 rounded-t-lg">
+        <div class="font-bold">Section Navigation</div>
+        {{ page.toc | safe }}
+    </div>
+    <div class="bg-slate-100 p-5 m-2 rounded-t-lg prose">
+        <h1>{{page.title}}</h1>
+        {{ page.content | safe }}
+    </div>
+    <div class="bg-slate-100 p-5 m-5 w-64 rounded-t-lg">
+        <div class="font-bold">Table of Contents</div>
+        <ul>
+        {% for h1 in page.toc %}
+            <li>
+                <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+                {% if h1.children %}
+                    <ul>
+                        {% for h2 in h1.children %}
+                            <li>
+                                <a class="ml-2" href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
 </div>
+<!--
 <div class="bg-gradient-to-b from-slate-100 w-full h-20"></div>
+-->
 {% endblock %}

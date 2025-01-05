@@ -82,10 +82,23 @@ Other:
   - [ ] other: sup, sub, mark
   - [ ] latex
   - [ ] images
+- [ ] navbar
+  - [ ] improve hover
+  - [ ] mobile: remove margins and change rounding
 - [x] get hot-reloading working
+- [ ] tailwind cdn for faster reloading?
+
+Later priority
+
+- [ ] basic shortcodes
+    - [ ] tip/important/warning banners
+    - [ ] code blocks with language
+    - [ ] image flipper
 
 ## Notes
 
 ### 2025-01-04
 
 After getting hot reloading working I want to test it out by getting some styling feature done.  I'm going to do some testing with the nav bar, and take inspiration from duck quill as noted above.
+
+Now I think I'm going to work on getting a section and article cards sorted.  I'm going to first start with a page that has a single left section.
