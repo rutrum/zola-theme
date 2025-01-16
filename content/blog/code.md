@@ -1,7 +1,7 @@
 +++
 title = "Code Formatting"
 description = "Code blocks and inline code."
-date = 2022-05-15T15:00:00Z
+date = "2025-01-03"
 draft = false
 
 [taxonomies]

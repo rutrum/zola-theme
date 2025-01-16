@@ -1,14 +1,12 @@
 +++
 title = "Quotes and References"
-description = "Quotes"
-date = 2022-05-15T15:00:00Z
+description = "Block quotes, citations, and footnotes."
+date = "2025-01-02"
 draft = false
 
 [taxonomies]
 tags = ["prose"]
 +++
-
-# Blockquotes
 
 The blockquote element represents content that is quoted from another source,
 optionally with a citation which must be within a `footer` or `cite` element,

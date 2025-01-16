@@ -7,11 +7,17 @@
     <div class="bg-slate-100 p-5 m-2 rounded-t-lg prose w-full">
         <h1>{{section.title}}</h1>
         {{ section.content | safe }}
-        <ul>
-            {% for page in section.pages %}
-            <li><a href="{{page.permalink}}">{{ page.title }}</a></li>
-            {% endfor %}
-        </ul>
     </div>
+</div>
+
+<div class="flex flex-row flex-wrap mx-auto max-w-3xl space-between justify-center">
+    {% for page in section.pages %}
+    <div class="bg-red-100 p-5 w-64 rounded-lg m-4">
+        <a href="{{page.permalink}}">{{ page.title }}</a>
+        <div>{{page.date | safe }}</div>
+        <div>{{page.description | safe }}</div>
+        <div class="italic">{{page.summary | safe }}</div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

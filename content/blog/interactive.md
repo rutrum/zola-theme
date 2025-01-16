@@ -1,7 +1,7 @@
 +++
 title = "Interactive Elements"
-description = "Interactive elements"
-date = 2022-05-15T15:00:00Z
+description = "Forms, input fields, file pickers, buttons, checkboxes, radio buttons, etc."
+date = "2025-01-06"
 draft = false
 
 [taxonomies]
@@ -9,6 +9,8 @@ tags = ["prose"]
 +++
 
 These are all HTML elements, so I'm not as concerned about this page.  I think these should all be shortcodes instead.
+
+<!-- more -->
 
 # Foldable Text
 

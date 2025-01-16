@@ -1,14 +1,12 @@
 +++
 title = "Tables"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-date = 2022-05-15T15:00:00Z
+description = "Tables and really wide tables."
+date = "2025-01-05"
 draft = false
 
 [taxonomies]
 tags = ["prose"]
 +++
-
-# Tables
 
 Tables aren't part of the core Markdown spec, but Zola supports them
 out-of-the-box.

@@ -87,6 +87,12 @@ Other:
   - [ ] mobile: remove margins and change rounding
 - [x] get hot-reloading working
 - [ ] tailwind cdn for faster reloading?
+- [ ] page lists in section
+  - [ ] date
+  - [ ] title
+  - [ ] description
+  - [ ] summary (first line)
+  - [ ] pagination
 
 Later priority
 

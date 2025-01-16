@@ -1,11 +1,15 @@
 +++
 title = "Basic Text"
+date = "2025-01-01"
+description = "Basic prose, headings, lists, paragraphs, horizonal rules."
 
 [taxonomies]
 tags = ["prose"]
 +++
 
 This page has examples of headings, paragraphs, and lists.
+
+<!-- more -->
 
 # H1
 
