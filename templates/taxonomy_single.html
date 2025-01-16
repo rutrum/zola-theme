@@ -3,8 +3,14 @@
 {% block debug %}taxonomy_single.html{% endblock %}
 
 {% block content %}
-<div class="text-3xl font-bold">{{taxonomy.name}}: {{term.name}}</div>
-{% for page in term.pages %}
-<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-{% endfor %}
+<div class="flex flex-row mx-auto justify-center items-start">
+    <div class="bg-slate-100 p-5 m-2 rounded-t-lg prose w-full">
+        <div class="text-3xl font-bold">{{taxonomy.name}}: {{term.name}}</div>
+        <ul>
+            {% for page in term.pages %}
+            <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock %}

@@ -3,11 +3,18 @@
 {% block debug %}taxonomy_list.html{% endblock %}
 
 {% block content %}
-{% for term in terms %}
-<a href="http://{{term.permalink | safe}}"><h2>{{ term.name }}</h2></a>
-    {% for page in term.pages %}
-    {# TODO: fix this http thing #}
-    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-    {% endfor %}
-{% endfor %}
+<div class="flex flex-row mx-auto justify-center items-start">
+    <div class="bg-slate-100 p-5 m-2 rounded-t-lg prose w-full">
+        {% for term in terms %}
+        <a href="{{term.permalink | safe}}">
+            <h2>{{ term.name }}</h2>
+        </a>
+        <ul>
+            {% for page in term.pages %}
+            <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

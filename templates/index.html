@@ -9,28 +9,30 @@
 </head>
 
 <body>
-    <div class="absolute top-0 left-0">
-        <p>{% block debug %}index.html{% endblock %}</p>
+  <div class="absolute top-0 left-0">
+    <p>{% block debug %}index.html{% endblock %}</p>
+  </div>
+  <!-- navbar -->
+  <div class="bg-slate-800 flex-row m-2 rounded-xl max-w-3xl mx-auto">
+    <div class="flex justify-between items-center w-full mx-auto max-w-prose h-16 text-slate-100">
+      <a class="text-xl font-black tracking-wide" href="/">{{ config.title }}</a>
+      <div>
+        {% for nav in config.extra.navlink %}
+        <a href="{{ nav.url }}" class="font-bold px-4 py-2 h-10 hover:bg-red-400 rounded-xl">{{ nav.name }}</a>
+        {% endfor %}
+      </div>
     </div>
-    <!-- navbar -->
-    <div class="bg-slate-800 flex-row m-2 rounded-xl max-w-3xl mx-auto">
-        <div class="flex justify-between items-center w-full mx-auto max-w-prose h-16 text-slate-100">
-            <a class="text-xl font-black tracking-wide" href="/">{{ config.title }}</a>
-              <div>
-                {% for nav in config.extra.navlink %}
-                <a 
-                  href="{{ nav.url }}"
-                  class="font-bold px-4 py-2 h-10 hover:bg-red-400 rounded-xl"
-                >{{ nav.name }}</a>
-                {% endfor %}
-              </div>
-            </div>
-        </div>
-    </div>
+  </div>
+  </div>
   <section class="section mx-auto my-10">
-  {% block content %} 
-    {{ section.content | safe }}
-  {% endblock %}
+    {% block content %}
+    <div class="flex flex-row mx-auto justify-center items-start">
+      <div class="bg-slate-100 p-5 m-2 rounded-t-lg prose">
+        {{ section.content | safe }}
+      </div>
+    </div>
+    {% endblock %}
   </section>
 </body>
+
 </html>
