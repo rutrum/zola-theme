@@ -10,11 +10,12 @@ serve:
     browser-sync start \
         --server public \
         --host localhost \
-        --watch true \
         --port 1111 \
+        --files static/styles/styles.css \
         --no-ghost-mode \
-        --reload-delay 500 \
         --no-open
+    #    --reload-delay 1000 \
+    #    --watch true \
 
 watch:
     just serve &
