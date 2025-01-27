@@ -1,6 +1,8 @@
 {
   description = "zola-theme";
-  inputs = {};
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  };
   outputs = { self, nixpkgs }: 
   let 
     name = "zola-theme";
@@ -13,6 +15,7 @@
       just
       zola
       tailwindcss
+      rust-parallel
     ];
   in 
     {
@@ -31,6 +34,6 @@
           watchexec
           nodePackages.browser-sync
         ]);
+      };
     };
-  };
 }

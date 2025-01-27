@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {}
+
+.footnote-definition {
+    @apply flex flex-row bg-slate-300 leading-none
+}
+
+.footnote-definition p {
+    @apply bg-slate-100
+}
