@@ -4,10 +4,13 @@
 
 @layer utilities {}
 
+/* Citations */
+/* [^1]: This is a citation. */
+
 .footnote-definition {
-    @apply flex flex-row bg-slate-300 leading-none
+    @apply flex flex-row items-center
 }
 
-.footnote-definition p {
-    @apply bg-slate-100
+.footnote-definition sup {
+    @apply mr-5 top-0
 }
