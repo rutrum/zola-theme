@@ -1,7 +1,7 @@
 +++
 title = "Quotes and References"
 description = "Block quotes, citations, and footnotes."
-date = "2025-01-02"
+date = 2025-01-02T00:00:00Z
 draft = false
 
 [taxonomies]
@@ -20,10 +20,10 @@ and optionally with in-line changes such as annotations and abbreviations.
 ## Blockquote attribution
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+> — Rob Pike [^1]
 
 > All men by nature desire to know.<br>
-> ― <cite>Aristotle[^2]</cite>
+> ― Aristotle [^2]
 
 > Power comes in response to a need, not a desire.<br>
 > — *Goku*

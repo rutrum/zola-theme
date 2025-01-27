@@ -1,13 +1,13 @@
 <div class="font-bold text-center w-full">Table of Contents</div>
 <ul>
     {% for h1 in page.toc %}
-    <li>
+    <li class="mt-2">
         <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
         {% if h1.children %}
         <ul>
             {% for h2 in h1.children %}
-            <li>
-                <a class="ml-2" href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+            <li class="ml-4 mt-2">
+                <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
             </li>
             {% endfor %}
         </ul>

@@ -1,7 +1,7 @@
 +++
 title = "Tables"
 description = "Tables and really wide tables."
-date = "2025-01-05"
+date = 2025-01-05T00:00:00Z
 draft = false
 
 [taxonomies]

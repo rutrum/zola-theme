@@ -1,7 +1,7 @@
 +++
 title = "Random Elements"
 description = "Abbr, sub, sup, kbd, mark, and link."
-date = "2025-01-08"
+date = 2025-01-08T00:00:00Z
 draft = false
 
 [taxonomies]

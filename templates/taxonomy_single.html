@@ -4,13 +4,23 @@
 
 {% block content %}
 <div class="flex flex-row mx-auto justify-center items-start">
-    <div class="bg-slate-100 p-5 m-2 rounded-t-lg prose w-full">
+    <div class="bg-slate-100 p-5 m-2 rounded-t-lg w-[65ch]">
         <div class="text-3xl font-bold">{{taxonomy.name}}: {{term.name}}</div>
-        <ul>
-            {% for page in term.pages %}
-            <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-            {% endfor %}
-        </ul>
+        {% for page in term.pages %}
+        <div class="flex flex-row justify-between mt-8 items-baseline mb-2">
+            <a class="text-xl font-bold" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            {% if page.date %}
+            <div>{{ page.date | date(format="%B %d, %Y")}}</div>
+            {% endif %}
+        </div>
+        <div>
+            {% if page.summary %}
+            {{ page.summary | safe }}
+            {% else %}
+            {{ page.description | safe }}
+            {% endif %}
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

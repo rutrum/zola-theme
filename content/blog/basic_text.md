@@ -1,6 +1,6 @@
 +++
 title = "Basic Text"
-date = "2025-01-01"
+date = 2025-01-01
 description = "Basic prose, headings, lists, paragraphs, horizonal rules."
 
 [taxonomies]

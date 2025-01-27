@@ -1,7 +1,7 @@
 +++
 title = "Interactive Elements"
 description = "Forms, input fields, file pickers, buttons, checkboxes, radio buttons, etc."
-date = "2025-01-06"
+date = 2025-01-06T00:00:00Z
 draft = false
 
 [taxonomies]
