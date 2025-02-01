@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="flex flex-row mx-auto justify-center items-start">
-    <div class="bg-slate-100 p-5 m-2 rounded-lg prose w-full">
+    <div class="p-5 m-2 prose w-full">
         <h1>{{section.title}}</h1>
         {{ section.content | safe }}
     </div>
@@ -12,7 +12,7 @@
 
 <div class="flex flex-row flex-wrap mx-auto max-w-4xl space-between justify-center">
     {% for page in section.pages %}
-    <div class="bg-slate-100 p-5 w-96 rounded-lg m-2 prose flex flex-col">
+    <div class="bg-slate-100 p-5 w-full rounded-lg m-2 prose flex flex-col">
         <a class="text-lg" href="{{page.permalink}}">{{ page.title }}</a>
         <div class="italic self-end">{{page.date | safe }}</div>
         <div class="text-right self-end">{{page.description | safe }}</div>

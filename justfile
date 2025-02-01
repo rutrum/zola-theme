@@ -1,3 +1,5 @@
+default: watch
+
 build:
     rust-parallel --shell --shell-path $(which bash) ::: 'just tailwind' 'zola build'
     #zola build -u localhost:1111
