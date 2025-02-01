@@ -4,9 +4,32 @@
 
 {% block content %}
 <div class="flex flex-row mx-auto justify-center items-start">
+    <!-- TODO formalize this logic somewhere
+        it should be based on a few things
+        the page.extra configuration
+        then each of the ancestors configuration
+        then the default config in config.toml
+
+        additionally, I ought to check if there is more than 1
+        item present for this section...maybe this logic should
+        be inside section?
+
+        [extra.sidebar.left]
+        type = "toc"      # type of information
+        force = false     # should it always be present even if there's one entry?
+        pad = true        # should the page still pad the spce if it were there?
+    -->
+    {% if page.extra %}
+    {% if page.extra.sidebar_left == "section" %}
     <div class="bg-slate-100 p-5 m-5 w-64 rounded-t-lg">
         {% include "sidebar/section.html" %}
     </div>
+    {% endif %}
+    {% else %}
+    <div class="bg-slate-100 p-5 m-5 w-64 rounded-t-lg">
+        {% include "sidebar/section.html" %}
+    </div>
+    {% endif %}
     <div class="m-2 prose w-full">
         <h1>{{page.title}}</h1>
         <p>{{page.description}}</p>

@@ -1,5 +1,8 @@
 +++
 title = "About Me"
+
+[extra]
+sidebar_left = ""
 +++
 
 Here's some information.
