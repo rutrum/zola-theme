@@ -21,24 +21,46 @@
     -->
     {% if page.extra %}
     {% if page.extra.sidebar_left == "section" %}
-    <div class="bg-slate-100 p-5 m-5 w-64 rounded-t-lg">
+    <div class="bg-slate-100 p-5 m-5 mr-12 w-64 rounded-t-lg sticky top-8">
         {% include "sidebar/section.html" %}
     </div>
     {% endif %}
     {% else %}
-    <div class="bg-slate-100 p-5 m-5 w-64 rounded-t-lg">
+    <div class="bg-slate-100 p-5 m-5 mr-12 w-64 rounded-t-lg sticky top-8">
         {% include "sidebar/section.html" %}
     </div>
     {% endif %}
-    <div class="m-2 prose w-full">
-        <h1>{{page.title}}</h1>
-        <p>{{page.description}}</p>
-        <div class="bg-slate-100 p-5 rounded-t-lg prose w-full">
-            {{ page.content | safe }}
+    <div class="mx-2 prose w-full">
+        <div class="sticky top-0 bg-gradient-to-b from-white from-70% py-16"></div>
+        <!-- 
+        TODO: figure how to embed this relative to above class, always at top, and also sticky
+        maybe use negative padding or something on the parent to offset it
+        -->
+
+
+        <div class="flex items-center sticky top-12 pb-12">
+            <span class="grow inline-block bg-slate-800 h-0.5 w-auto my-4"></span>
+            <span class="px-4 text-black text-3xl font-extrabold">{{page.title}}</span>
+            <span class="grow inline-block bg-slate-800 h-0.5 w-auto"></span>
         </div>
+        <div class="mb-20">
+            <p class="italic">{{page.description}}</p>
+            <p class="">Published: {{page.date | date}}</p>
+        </div>
+        <div
+            class="flex items-center sticky top-0 pt-12 pb-0 bg-gradient-to-b from-transparent via-white via-20% to-white">
+            <span class="grow inline-block bg-slate-800 h-0.5 w-auto my-4"></span>
+            <span class="px-4 text-black text-3xl font-extrabold">{{page.title}}</span>
+            <span class="grow inline-block bg-slate-800 h-0.5 w-auto"></span>
+        </div>
+        {{ page.content | safe }}
+        <!--
+        <div class="bg-slate-100 p-5 rounded-t-lg prose w-full">
+        </div>
+        -->
     </div>
     {% if page.toc | length > 0 %}
-    <div class="bg-slate-100 p-5 m-5 w-64 rounded-t-lg sticky top-8">
+    <div class="bg-slate-100 p-5 m-5 ml-12 w-64 rounded-t-lg sticky top-8">
         {% include "sidebar/table_of_contents.html" %}
     </div>
     {% else %}
